@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 
 img {
-  border-radius: 90%;
   border-style: solid;
   border-color: white;
   align-items: center;
+  width: 80%;
+  height: auto;
+  border-radius: 50%;
 }
 
 .columnLeft {
@@ -30,7 +32,7 @@ img {
   max-width: 1000px;
   min-width: 100px;
   display: grid;
-  grid-template-columns: 1fr 2.5fr;
+  grid-template-columns: 1.5fr 2.5fr;
   box-shadow: 0 35px 55px;
 }
 
@@ -42,15 +44,6 @@ button {
   font-size: large;
   box-shadow: 0 3px 3px;
   border-radius: 5px;
-}
-
-.navbar button {
-  font-size: large;
-  box-shadow: 3px 3px 0px 0px;
-  border-radius: 5px;
-  border: none;
-  background-color: rgb(160, 210, 227);
-  color: lightgray;
 }
 
 button:hover {
@@ -102,19 +95,24 @@ a {
   color: black;
 }
 
-.navbar {
-  position: relative;
-  margin-top: 0;
-  padding: 0;
-  top: 0;
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-a:hover {
-  background-color: rgb(177, 170, 159);
-}
-
-@media screen and (max-width: 768px) {
+/* Media query for small screens */
+@media only screen and (max-width: 600px) {
   .container {
-    background-color: #1fc8db;
+    grid-template-columns: 1fr;
+  }
+
+  .columnLeft,
+  .columnRight {
+    padding: 20px;
+  }
+
+  .columnRight h2 {
+    text-align: center;
   }
 }
